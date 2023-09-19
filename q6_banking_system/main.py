@@ -1,4 +1,5 @@
 from AccountClass import BankAccount
+from welcomeText import welcome_text
 
 
 def menu():
@@ -7,8 +8,10 @@ def menu():
         "Deposit",
         "Withdraw",
         "Account Summary",
+        "Transaction History",
         "Update Details",
-        "Delete Account",
+        "Close Account",
+        "Search Account",
         "Exit",
     ]
     print("--------------------")
@@ -19,6 +22,8 @@ def menu():
 
 
 def main():
+    print(welcome_text)
+    print("Welcome to the Da Bank!\n(By Suyash Handa)")
     while True:
         try:
             try:
@@ -36,15 +41,20 @@ def main():
             elif option == 4:
                 account.summary()
             elif option == 5:
-                account.update()
+                account.displayTransactionHistory()
             elif option == 6:
-                account.delete()
+                account.update()
             elif option == 7:
+                account.closeAccount()
+            elif option == 8:
+                account.searchAccount()
+            elif option == 9:
                 del account
-                print("Thank you for using our services!")
+                print("Thank you for using our services @ Da Bank!")
                 break
-        except:
+        except Exception as e:
             print("Something went wrong! Please try again.")
+            print(e)
             continue
 
 

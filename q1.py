@@ -1,4 +1,4 @@
-# program to check if two strings are balanced
+# prgrm to check if two strings are balanced
 
 """
 the func below adds the count of each character in the string 
@@ -39,8 +39,7 @@ def check_balance(str1, str2):
 print("Prewritten test cases:")
 print('"abc" - "cba"', check_balance("abc", "cba"))  # True
 print('"abc" - "cbd"', check_balance("abc", "cbd"))  # False
-print('"abc" - "cb"', check_balance("abc", "cb"))  # False
-print()
+print('"abc" - "cb"', check_balance("abc", "cb"), end="\n\n")  # False
 
 # user input
 str1 = input("Enter the first string: ")

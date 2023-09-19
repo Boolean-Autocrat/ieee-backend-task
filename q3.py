@@ -23,6 +23,11 @@ class Subset:
 
 # test cases
 subset = Subset([1, 2, 3])
-print(subset.generate())
+print(subset.generate(), end="\n\n")
 subset = Subset([1, 2, 3, 4])
+print(subset.generate(), end="\n\n")
+
+# user input
+set = list(map(int, input("Enter the set of numbers (separated by spaces): ").split()))
+subset = Subset(set)
 print(subset.generate())
