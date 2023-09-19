@@ -38,7 +38,3 @@ python main.py
 - Updating the account details
 - Deleting/closing the account
 - Searching for an account by name
-
-```
-
-```
