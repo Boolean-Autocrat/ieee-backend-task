@@ -10,7 +10,7 @@ The folder structure for the banking system is as follows:
 q6_banking_system
 ├── main.py
 ├── AccountClass.py
-├── welcomeText.py
+├── WelcomeText.py
 ```
 
 ## How to run
