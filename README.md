@@ -1,4 +1,4 @@
-This repo contains the solutions for the IEEE Backend Task by Suyash Handa.
+This repo contains the solutions for the IEEE @ BITS Pilani's Backend Task by Suyash Handa.
 
 # Details for the Bankings System (Q6)
 
