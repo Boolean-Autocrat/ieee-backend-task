@@ -1,5 +1,5 @@
 from AccountClass import BankAccount
-from welcomeText import welcome_text
+from WelcomeText import welcome_text
 
 
 def menu():
