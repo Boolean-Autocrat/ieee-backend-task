@@ -1,38 +1,14 @@
 # prgrm to check if two strings are balanced
-
-"""
-the func below adds the count of each character in the string 
-to the dictionary (ig you can call it a hash table)
-"""
-
-
-def add_to_dict(str, dict):
-    for i in str:
-        if i in dict:
-            dict[i] += 1
-        else:
-            dict[i] = 1
-
-
-"""
-the func below checks if the two strings are balanced 
-by balancing the hash tables
-(I've used guard clauses to reduce the nesting)
-"""
+# (all chars in s1 are in s2)
 
 
 def check_balance(str1, str2):
-    if len(str1) != len(str2):
-        return False
-    if str1 == str2:
-        return True
-    dict1 = {}
-    dict2 = {}
-    add_to_dict(str1, dict1)
-    add_to_dict(str2, dict2)
-    if dict1 == dict2:
-        return True
-    return False
+    for char in str1:
+        if char not in str2:
+            return False
+        else:
+            str2 = str2.replace(char, "", 1)
+    return True
 
 
 # test cases
@@ -44,6 +20,8 @@ print('"abc" - "cb"', check_balance("abc", "cb"), end="\n\n")  # False
 # user input
 str1 = input("Enter the first string: ")
 str2 = input("Enter the second string: ")
-print("The strings are balanced") if check_balance(str1, str2) else print(
-    "The strings are not balanced"
+print(
+    "The strings are balanced.\nAll character in the first string are present in the second string!"
+) if check_balance(str1, str2) else print(
+    "The strings are not balanced.\nAll characters in the first string are not present in the second string."
 )
